@@ -49,9 +49,8 @@ function Post()
 			contentType: "application/json",
 			sucess: function(responseJSON)
 			{
-				console.log(responseJSON);
 				BlogPosts();
-	            	
+	            console.log(responseJSON);
 			},
 			error: function(err)
 			{
@@ -60,7 +59,7 @@ function Post()
 	            	
 			}
 	    });	
-	    //BlogPosts();
+	    BlogPosts();
 	    cleanPost();
     });
 
