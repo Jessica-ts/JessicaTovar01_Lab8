@@ -26,7 +26,6 @@ function BlogPosts()
 
 function Post()
 {
-	//BlogPosts();
 	$("#Posts").on("submit", function(event) 
 	{
         event.preventDefault();
@@ -59,7 +58,6 @@ function Post()
 	            	
 			}
 	    });	
-	    BlogPosts();
 	    cleanPost();
     });
 
@@ -171,7 +169,7 @@ function cleanDelete()
 }
 
 
-
+BlogPosts();
 Post();
 Update();
 Delete();
