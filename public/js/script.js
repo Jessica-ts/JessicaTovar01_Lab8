@@ -26,7 +26,7 @@ function BlogPosts()
 
 function Post()
 {
-	BlogPosts();
+	//BlogPosts();
 	$("#Posts").on("submit", function(event) 
 	{
         event.preventDefault();
@@ -129,6 +129,7 @@ function Delete()
 			success: function(responseJSON)
 			{
 				$("#deleteForm").remove();
+				BlogPosts();
 			},
 			error: function(err)
 			{
@@ -136,7 +137,7 @@ function Delete()
 				$(".DelError").show();
 			}
 		});
-		BlogPosts();
+		
 		cleanDelete();
 		
 	});
