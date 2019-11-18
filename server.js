@@ -125,7 +125,7 @@ app.delete("/api/blog-posts/:id", (req, res) =>
             }
         })
     .catch(error => {
-            conole.log(error);
+            console.log(error);
             res.statusMessage = "Something went wrong with the DB. Try again later"
             return res.status(500).json({
                 status: 500,
