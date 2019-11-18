@@ -127,7 +127,7 @@ function Delete()
 			contentType: "application/json",
 			success: function(responseJSON)
 			{
-				$("#blogPosts").remove();
+				$("#blogPosts").reset();
 				BlogPosts();
 			},
 			error: function(err)
