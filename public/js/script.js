@@ -62,7 +62,7 @@ function Post()
 			}
 	    });	
 	    //BlogPosts();
-	    c//leanPost();
+	    //leanPost();
     });
 
     
