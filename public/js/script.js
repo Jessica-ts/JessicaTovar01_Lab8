@@ -51,7 +51,6 @@ function Post()
 			{
 				console.log(responseJSON);
 				BlogPosts();
-	    		cleanPost();
 	            	
 			},
 			error: function(err)
@@ -62,7 +61,7 @@ function Post()
 			}
 	    });	
 	    //BlogPosts();
-	    //leanPost();
+	    cleanPost();
     });
 
     
