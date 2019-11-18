@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Blog Post</title>
+		<link href="./css/style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<header>
+			<span class="blog">
+    			<img src="./image/Blog.jpg" alt="blog"/>
+    		</span>
+    		<h1>
+    			Blog Post
+    		</h1>
+    	</header>
+    	<main>
+    		<div class="edit">
+            	<form id="Posts">
+                		<fieldset>
+                			<h2>Post</h2>
+                    		<label for = "pTitle"> Title: </label>
+                    		<input type="text" id="Title"> <p> </p>
+                    		<label for = "pCont"> Content: </label>
+                    		<textarea id="Content"> </textarea> <p> </p>
+                    		<label for = "pAuthor"> Author: </label>
+                    		<input type="text" id="Author"> <p></p>
+                    		<label for = "pDate"> Publish Date: </label>
+                    		<input type="text" id="Date"> <p></p>
+                    		<button id="BtnPost" type="submit"> Post </button>
+                    		<p class="PError"></p>
+                		</fieldset>
+                </form>
+                	<hr>
+           		<form id="Updatepost">
+                	<h2>Update</h2>
+                		<fieldset>	
+                			<label for = "UpID"> Id: </label>
+                    		<input type="text" id="UID"> <p> </p>
+                    		<label for = "UpTitle"> Title: </label>
+                    		<input type="text" id="UTitle"> <p> </p>
+                    		<label for ="UpCont"> Content: </label>
+                    		<textarea id="UContent"></textarea> <p> </p>
+                    		<label for ="UpAuthor"> Author: </label>
+                    		<input type="text" id="UAuthor"> <p></p>
+                    		<label for = "UpDate"> Publish Date: </label>
+                    		<input type="text" id="UDate"> <p></p>
+                    		<button id="BtnUpdate" type="submit"> Update </button>
+                    		<p class="UpError"></p>
+                    	</fieldset>
+                </form>
+            		<hr>
+
+            	<form id="Deletepost">
+                		<h2>Delete post</h2>
+                		<fieldset>
+                    		<label for = "DelID"> ID: </label>
+                    		<input type="text" id="DId"> <p> </p>
+                    		<button id="BtnDel" type="submit"> Delete </button>
+                    		<p class="DelError"></p>
+                		</fieldset>
+            	</form>
+            </div>
+
+
+			<div class="Posts">
+            	<h2>Recent blog posts</h2>
+            	<form id="EnterPosts">
+            		<ol id="blogPosts">
+
+            		</ol>
+           		</form>
+        	</div>
+		
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="./js/script.js" type="text/javascript"></script>
+	</body>
+</html>
