@@ -69,6 +69,7 @@ app.get("/api/blog-posts", (req,res, next) => {
 
 
 app.post("/api/blog-posts", jsonParser, (req,res) => {
+    let id = uuidv4()   
     let title = req.body.title;
     let content = req.body.content;
     let author = req.body.author;
@@ -85,7 +86,7 @@ app.post("/api/blog-posts", jsonParser, (req,res) => {
 
     let newPost=
     {
-    	id : uuid(),
+    	id : id,
     	title : title,
     	content : content,
     	author : author,
