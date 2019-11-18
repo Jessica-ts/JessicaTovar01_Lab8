@@ -125,6 +125,7 @@ app.delete("/api/blog-posts/:id", (req, res) =>
             }
         })
     .catch(error => {
+            conole.log(error);
             res.statusMessage = "Something went wrong with the DB. Try again later"
             return res.status(500).json({
                 status: 500,
@@ -188,6 +189,7 @@ app.put("/api/blog-posts/:id", jsonParser, (req,res) => {
         return res.status(202).json(posts);
         })
     .catch( error => {
+            console.log(error);
             res.statusMessage = "Something went wrong with the DB. Try again later.";
             return res.status( 500 ).json({
                 status : 500,
