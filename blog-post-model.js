@@ -9,7 +9,7 @@ let BlogPostSchema = mongoose.Schema({
 	author: {type: String},
 	publishDate: {type: String}
 
-})
+});
 
 let BlogPosts = mongoose.model('BlogPosts', BlogPostSchema);
 
