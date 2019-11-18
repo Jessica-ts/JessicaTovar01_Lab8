@@ -50,6 +50,8 @@ function Post()
 			sucess: function(responseJSON)
 			{
 				console.log(responseJSON);
+				BlogPosts();
+	    		cleanPost();
 	            	
 			},
 			error: function(err)
@@ -59,8 +61,8 @@ function Post()
 	            	
 			}
 	    });	
-	    BlogPosts();
-	    cleanPost();
+	    //BlogPosts();
+	    c//leanPost();
     });
 
     
