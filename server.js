@@ -200,23 +200,42 @@ app.put("/api/blog-posts/:id", jsonParser, (req,res) => {
 
 
 let server;
-function runServer (port, databaseUrl) {
-    return new Promise( (resolve, reject) => {
-        mongoose.connect(databaseUrl, err => {
-            if (err) 
-            {
-                return reject(err)
-            } 
-            else 
-            {
-                server = app.listen(port, () => {
-                    console.log('App is running on port ' + port)
-                    resolve()
-                })
-                
+function runServer(port, databaseUrl){
+
+    return new Promise( (resolve, reject ) => {
+
+        mongoose.connect(databaseUrl, response => {
+
+            if ( response ){
+
+                return reject(response);
+
             }
-        })
-    })
+
+            else{
+
+                server = app.listen(port, () => {
+
+                    console.log( "App is running on port " + port );
+
+                    resolve();
+
+                })
+
+                .on( 'error', err => {
+
+                    mongoose.disconnect();
+
+                    return reject(err);
+
+                })
+
+            }
+
+        });
+
+    });
+
 }
 
 function closeServer () {
