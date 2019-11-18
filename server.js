@@ -111,7 +111,7 @@ app.delete("/api/blog-posts/:id", (req, res) =>
 	BlogPostsList.deletePost(idauthor)
    
     .then(posts => {
-        if (post) 
+        if (posts) 
         {
             return res.status(200).json(posts)
         } 
