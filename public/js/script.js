@@ -127,7 +127,7 @@ function Delete()
 			contentType: "application/json",
 			success: function(responseJSON)
 			{
-				$("#deleteForm").remove();
+				$("#Deletepost").remove();
 				BlogPosts();
 			},
 			error: function(err)
